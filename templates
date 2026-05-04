@@ -1,0 +1,114 @@
+#complaints
+
+<textarea name="complaint"></textarea> Submit
+#dashboards
+
+Welcome {{ student[1] }}
+Attendance
+{{ attendance[1] }}%
+Logout
+
+#fees
+
+{{ name }}
+{{ course }} | Year {{ year }}
+
+Fees Details
+Tuition
+Total: {{ tuition }}
+Paid: {{ paid }}
+Pending: {{ pending }}
+
+Hostel
+Total: {{ hostel_fee }}
+
+Transport
+Total: {{ bus_fee }}
+
+Download Receipt
+
+
+
+Back
+#login
+
+Student Login
+Welcome back 👋
+
+
+Login
+#marks
+
+Marks
+Select Year:
+{% for y in years %} {{ y }} {% endfor %}
+
+{% for sem, subjects in semester_data.items() %}
+
+Semester {{ sem }}
+{% for m in subjects %}
+<tr>
+    <td>{{ m[1] }}</td>
+    <td>{{ m[2] }}</td>
+    <td>{{ m[3] }}</td>
+    <td>{{ m[2] + m[3] }}</td>
+    <td>{{ get_grade_letter(m[2] + m[3]) }}</td>
+    <td>{{ m[6] }}</td>
+</tr>
+{% endfor %}
+Subject	Internal	External	Total	Grade	Credits
+
+{% endfor %}
+
+SGPA: {{ sgpa }}
+CGPA: {{ cgpa }}
+
+Select subjects for revaluation:
+{% for m in marks %}
+
+{{ m[1] }}
+
+{% endfor %}
+
+
+Apply for Revaluation
+Back
+#menu
+
+Student Portal
+Fees Details
+
+
+Marks
+
+
+Attendance
+
+
+Timetable
+
+
+Complaint
+
+
+
+Logout
+#timetable
+
+{{ name }}
+{{ course }} | Year {{ year }}
+
+Timetable
+{% for day in days %} {% endfor %}
+{% for time in times %}
+
+{% for day in days %}
+<td class="{% if timetable[time].get(day) %}class-slot{% else %}free-slot{% endif %}">
+    {{ timetable[time].get(day, '-') }}
+</td>
+{% endfor %}
+{% endfor %}
+Time	{{ day }}
+{{ time }}
+
+Back
