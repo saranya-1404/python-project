@@ -1,0 +1,13 @@
+Attendance
+{% if attendance %}
+{% for a in attendance %}
+{{ a[1] }} → {{ a[2] }}/{{ a[3] }}
+({{ (a[2]/a[3]*100)|round(1) }}%)
+
+{% endfor %}
+{% else %}
+
+No attendance data available
+
+
+{% endif %}
