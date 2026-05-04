@@ -1,0 +1,106 @@
+body {
+font-family: 'Segoe UI', Arial;
+background-color: #f4f6f9;
+margin: 0;
+padding: 0;
+}
+
+/* login page only */
+.login-page {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to right, #dbeafe, #fef3c7);
+}
+
+/* container */
+.container {
+width: 70%;
+margin: 40px auto;
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+/* student header */
+.student-header {
+text-align: center;
+margin-bottom: 20px;
+padding: 10px;
+background: #e0f2fe;
+border-radius: 8px;
+}
+
+/* headings */
+h2 {
+text-align: center;
+color: #333;
+}
+
+h3 {
+color: #444;
+}
+
+/* buttons */
+button {
+padding: 8px 14px;
+margin: 5px;
+border: none;
+border-radius: 6px;
+background-color: #3b82f6;
+color: white;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #2563eb;
+}
+
+/* table */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+}
+
+th, td {
+padding: 16px;
+text-align: center;
+border: 1px solid #ddd;
+}
+
+/* timetable header */
+th {
+background-color: #fef3c7;
+}
+
+/* class slots */
+.class-slot {
+background-color: #bbf7d0;
+}
+
+/* free slots */
+.free-slot {
+background-color: white;
+}
+
+/* zebra rows */
+tr:nth-child(even) {
+background-color: #f9fafb;
+}
+
+/* input (login) */
+input {
+width: 90%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+
+/* links */
+a {
+text-decoration: none;
+}
